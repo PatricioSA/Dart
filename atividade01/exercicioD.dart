@@ -1,4 +1,10 @@
+import '../aula11_funcoes/funcaoVoid.dart';
+
 void main() {
+  linha();
+  print('CÁLCULO DE MÉDIA');
+  linha();
+  
   double nota1 = 5; 
   double nota2 = 4;
   double nota3 = 8;

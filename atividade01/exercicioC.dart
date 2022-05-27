@@ -3,5 +3,5 @@ void main() {
   int numero2 = 2;
   int soma = numero1 + numero2;
 
-  print('A soma dos números é: $soma');
+  print('$numero1 + $numero2 = $soma');
 }

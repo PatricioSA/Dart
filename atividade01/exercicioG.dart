@@ -1,4 +1,10 @@
+import '../aula11_funcoes/funcaoVoid.dart';
+
 void main() {
+  linha();
+  print('CÁCULO DA ÁREA DO QUADRADO');
+  linha();
+  
   int ladoQuadrado = 5;
   int areaQuadrado = ladoQuadrado * ladoQuadrado;
   double dobroAreaQuadrado = areaQuadrado * 2;
