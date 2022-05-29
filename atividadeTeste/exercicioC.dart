@@ -1,6 +1,10 @@
+import 'dart:io';
 void main() {
-  int numero1 = 8;
-  int numero2 = 2;
+  stdout.write('Insira um número: ');
+  int numero1 = int.parse(stdin.readLineSync()!);
+
+  stdout.write('Insira mais um número: ');
+  int numero2 = int.parse(stdin.readLineSync()!);
   
   int soma = somar(numero1, numero2);
 
