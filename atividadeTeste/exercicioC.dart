@@ -11,4 +11,8 @@ void main() {
   print('$numero1 + $numero2 = $soma');
 }
 
-int somar(valor1, valor2) => (valor1 + valor2);
+int somar(int valor1, [int valor2 = 0]) => (valor1 + valor2);
+
+escreverNaTela() {
+  stdout.write('Insira um número: ');
+}
