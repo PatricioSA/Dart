@@ -1,9 +1,9 @@
 import 'dart:io';
 void main() {
-  stdout.write('Insira um número: ');
+  pedirUmNumero();
   int numero1 = int.parse(stdin.readLineSync()!);
 
-  stdout.write('Insira mais um número: ');
+  pedirUmNumero();
   int numero2 = int.parse(stdin.readLineSync()!);
   
   int soma = somar(numero1, numero2);
@@ -13,6 +13,6 @@ void main() {
 
 int somar(int valor1, [int valor2 = 0]) => (valor1 + valor2);
 
-escreverNaTela() {
+pedirUmNumero() {
   stdout.write('Insira um número: ');
 }

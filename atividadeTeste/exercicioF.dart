@@ -9,7 +9,6 @@ void main() {
   linha();
   print('');
 
-  const pi = 3.14;
   stdout.write('Informe o raio do círculo: ');
   int raioCirculo = int.parse(stdin.readLineSync()!);
 
@@ -24,5 +23,3 @@ double calcularAreaCirculo(raio) {
   double area = pi * pow(raio, 2);
   return area;
 }
-
-//double calcularAreaCirculo2(raio, pi = 3.14) => ()
