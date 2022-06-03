@@ -1,6 +1,12 @@
 import 'dart:io';
+import '../aula11_funcoes/funcaoVoid.dart';
 
 void main() {
+
+  linha();
+  print('MÉDIA DAS NOTAS');
+  linha();
+
   double nota = 0;
   double somaNotas = 0;
 
@@ -13,5 +19,6 @@ void main() {
 
   double media = somaNotas / 4;
 
+  print('');
   print('A média é: $media');
 }
