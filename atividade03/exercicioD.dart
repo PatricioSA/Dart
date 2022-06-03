@@ -21,6 +21,7 @@ void main() {
 
   double media = calcularMedia(nota1, nota2, nota3, nota4);
 
+  //Função anônima
   dynamic Function(double, double, double, double) media01 = calcularMedia01;
 
   print('');

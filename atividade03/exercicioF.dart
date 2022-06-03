@@ -13,9 +13,14 @@ void main() {
   int raioCirculo = int.parse(stdin.readLineSync()!);
 
   double areaCirculo = calcularAreaCirculo(raioCirculo);
+  double areaCirculo01 = calcularAreaCirculo01(raioCirculo);
 
   print('');
   print('A área do círculo é ${areaCirculo}cm');
+
+  print('');
+  print('Resultado utilizando Arrow function');
+  print('A área do círculo é ${areaCirculo01}cm');
 }
 
 double calcularAreaCirculo(raio) {
@@ -23,3 +28,6 @@ double calcularAreaCirculo(raio) {
   double area = pi * pow(raio, 2);
   return area;
 }
+
+//Arrow function
+double calcularAreaCirculo01(raio, [pi = 3.14]) => (pi * pow(raio, 2));

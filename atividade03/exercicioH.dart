@@ -15,8 +15,24 @@ void main() {
 
   double salario = calcularSalario(horasTrabalhadasMes, ganhoPorHora);
 
+  double salario01 = calcularSalario01(ganhoHora: ganhoPorHora, horasTrabalhadas: horasTrabalhadasMes);
+
   print('');
   print('Seu salário é: R\$$salario');
+
+  print('');
+  print('Resultado utilizando função nomeada:');
+  print('R\$$salario01');
 }
 
+//Arrow Function
 double calcularSalario(horasTrabalhadas, ganhoHora) => (horasTrabalhadas * ganhoHora);
+
+//Função com parâmetro nomeado
+double calcularSalario01({horasTrabalhadas, ganhoHora}) {
+  int ht = horasTrabalhadas ?? 0;
+  double gh = ganhoHora ?? 0;
+  double salario = ht * gh;
+
+  return salario;
+}
