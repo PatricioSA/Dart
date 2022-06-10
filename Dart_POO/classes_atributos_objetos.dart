@@ -50,10 +50,13 @@ void main() {
 
   casaDaJane.cor = 'Verde';
   casaDaJane.quantidadeJanelas = 10;
-  casaDaJane.numero = 200;
+  casaDaJane.numero = 2000;
 
   //Saída para os dados da casaDaJane
   casaDaJane.abrirJanela('Frente!');
   print('A casa da Jane é: ${casaDaJane.cor}');
   print('A casa da Jane tem: ${casaDaJane.quantidadeJanelas} janelas!');
+  print('O número da casa da Jane é: ${casaDaJane.numero}');
+  //Acessando o método fecharJanela()
+  casaDaJane.fecharJanela('Fundos!');
 }
