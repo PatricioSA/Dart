@@ -1,13 +1,13 @@
-import 'dart:io';
-
 void main() {
-  stdout.write('Digite um número: ');
-  int numero1 = int.parse(stdin.readLineSync()!);
+  List numeros = [10, 22, 9, 4, 5, 15, 12, 40, 74];
+  List numerosPares = [];
 
-  stdout.write('Digite outro número: ');
-  int numero2 = int.parse(stdin.readLineSync()!);
+  dynamic verificarPar = (int numero) => (numero % 2 == 0);
 
-  int soma = numero1 + numero2;
+  var teste = numeros.where(verificarPar);
+  
 
-  print('$numero1 + $numero2 = $soma');
+  print(numeros);
+  print(numerosPares);
 }
+
