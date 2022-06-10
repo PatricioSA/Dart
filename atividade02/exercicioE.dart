@@ -1,14 +1,18 @@
 import 'dart:io';
-import '../aula11_funcoes/funcaoVoid.dart';
 
 void main() {
-  linha();
-  print('CONVERTER METROS PARA CENTÍMETROS');
-  linha();
 
-  stdout.write('Insira um valor em metros: ');
-  double valorMetros = double.parse(stdin.readLineSync()!);
-  double conversaoCentimetros = valorMetros * 100;
+  stdout.write('Insira uma frase: ');
+  String? frase = stdin.readLineSync();
+  
+  print('A frase invertida é: ${EscreverInverso(frase)}');
+}
 
-  print('$valorMetros m = $conversaoCentimetros cm');
+String EscreverInverso(frase) {
+  String fraseInvertida = '';
+
+  for(var i = frase.length - 1; i >= 0; i--) {
+    fraseInvertida += frase[i];
+  }
+  return fraseInvertida;
 }
