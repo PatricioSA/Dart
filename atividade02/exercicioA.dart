@@ -2,13 +2,26 @@ void main() {
   //Criando a lista de valores
   List valores = [5.5, 7.0, 6.3, 9.7, 10.0, 3.5];
   List valores2 = [6.0, 10.0, 2.3, 5.5, 8.3];
-  //List valoresIguais = [];
-
-  bool valoresIguais(double valor, double valor2) => (valor == valor2);
-
-  //var valoresI = valores.where(valoresIguais());
+  
+  var somaLista = somarLista(valores, valores2);
   
   //Imprimindo da lista
-  print(valores);
-  print(valoresIguais);
+  print('A lista 1 é: $valores');
+  print('A lista 2 é: $valores2');
+  print('A soma das listas é: $somaLista');
+}
+
+dynamic somarLista(List lista1, List lista2) {
+  List<double> somaListas = [];
+
+  for(var elemento in lista1) {
+    somaListas.add(elemento);
+  }
+
+  for(var elemento in lista2) {
+    somaListas.add(elemento);
+  }
+
+  var set = somaListas.toSet();
+  return set;
 }

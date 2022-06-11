@@ -1,23 +1,25 @@
 void main() {
-  print('Os números primos até 100 são: ${imprimirPrimos()}');
+  var primos = imprimirPrimos();
+  print('Os números primos até 100 são: $primos');
 }
 
 dynamic imprimirPrimos() {
-  int divisores = 0;
   List primos = [];
 
-  for(var i = 1; i <= 100; i++) {
+  for(var i = 2; i <= 100; i++) {
+    int divisores = 0;
     
-    for(var c = 1; c == i; c++) {
-    
+    for(var c = 1; c <= i; c++) {
       if(i % c == 0) {
-          divisores += 1;
+        divisores += 1;
+        
       }
-      if(divisores == 2) {
-        primos.add(i);
-      }
-      
     }
+    
+    if(divisores == 2) {
+      primos.add(i);
+    }
+
   }
 
   return primos;
