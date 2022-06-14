@@ -7,16 +7,16 @@ dynamic imprimirPrimos() {
   List primos = [];
 
   for(var i = 2; i <= 100; i++) {
-    int divisores = 0;
+    int quantidadeDivisores = 0;
     
     for(var c = 1; c <= i; c++) {
       if(i % c == 0) {
-        divisores += 1;
+        quantidadeDivisores += 1;
         
       }
     }
     
-    if(divisores == 2) {
+    if(quantidadeDivisores == 2) {
       primos.add(i);
     }
 
