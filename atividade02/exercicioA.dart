@@ -3,7 +3,7 @@ void main() {
   List valores = [5.5, 7.0, 6.3, 9.7, 10.0, 3.5];
   List valores2 = [6.0, 10.0, 2.3, 5.5, 8.3];
   
-  var somaLista = somarLista(valores, valores2);
+  var somaLista = juntarListas(valores, valores2);
   
   //Imprimindo da lista
   print('A lista 1 é: $valores');
@@ -11,7 +11,7 @@ void main() {
   print('A soma das listas é: $somaLista');
 }
 
-dynamic somarLista(List lista1, List lista2) {
+dynamic juntarListas(List lista1, List lista2) {
   List<double> somaListas = [];
 
   for(var elemento in lista1) {

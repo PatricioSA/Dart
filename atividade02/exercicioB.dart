@@ -3,7 +3,7 @@ import 'dart:io';
 void main() {
 
   stdout.write('Insira uma frase: ');
-  String? frase = stdin.readLineSync();
+  String frase = (stdin.readLineSync()!).toLowerCase();
   //String frase = 'ama';
   print(verificarPolindromo(frase));
 }

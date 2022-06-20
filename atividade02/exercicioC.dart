@@ -2,11 +2,11 @@ void main() {
   List numeros = [10, 22, 9, 4, 5, 15, 12, 40, 74];
 
   print(numeros);
-  print(verificarPar(numeros));
+  print('A lista de pares é: ${verificarPar(numeros)}');
   print(verificarImpar(numeros));
 }
 
-verificarPar(List numeros) {
+List verificarPar(List numeros) {
   List pares = [];
   
   for(var elemento in numeros) {
@@ -14,7 +14,7 @@ verificarPar(List numeros) {
       pares.add(elemento);
     }
   }
-  return 'A lista de pares é: $pares';
+  return pares;
 }
 
 verificarImpar(List numeros) {

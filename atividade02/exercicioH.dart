@@ -17,7 +17,7 @@ void main() {
 dynamic verificarPrimo(numero) {
   int divisores = 0;
 
-  for(var c = 1; c <= numero; c++) {
+  for(var c = 2; c <= numero; c++) {
     if(numero % c == 0) {
       divisores += 1;
     }

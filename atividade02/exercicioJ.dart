@@ -23,8 +23,8 @@ void main() {
 List<double> retornarValores(double valor1, double valor2, double valor3) {
   List<double> valores = [];
 
-  valores.add(valor1 * 3);
-  valores.add(valor2 * 3);
-  valores.add(valor3 * 3);
+  valores.add(valor1 * 2);
+  valores.add(valor2 * 2);
+  valores.add(valor3 * 2);
   return valores;
 }

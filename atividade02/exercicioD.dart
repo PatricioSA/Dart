@@ -11,7 +11,7 @@ void main() {
   while(true) {
     print('');
     stdout.write('Digite uma opção (pedra, papel, tesoura): ');
-    String? escolhaJogador = stdin.readLineSync();
+    String escolhaJogador = (stdin.readLineSync()!).toLowerCase();
     print(jogar(escolhaJogador));
 
     print('');
