@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import '../atividade01_extra1/exercicioA.dart';
 
 void main() {
 
