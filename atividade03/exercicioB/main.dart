@@ -11,15 +11,15 @@ void main() {
   Trapezio trapezio = new Trapezio();
 
   stdout.write('Insira a base maior: ');
-  int baseMaior = int.parse(stdin.readLineSync()!);
+  trapezio.baseMaior = int.parse(stdin.readLineSync()!);
 
   stdout.write('Insira a base menor: ');
-  int baseMenor = int.parse(stdin.readLineSync()!);
+  trapezio.baseMenor = int.parse(stdin.readLineSync()!);
 
   stdout.write('Insira a altura: ');
-  int altura = int.parse(stdin.readLineSync()!);
+  trapezio.altura = int.parse(stdin.readLineSync()!);
 
-  double areaTrapezio = trapezio.calcularArea(baseMaior, baseMenor, altura);
+  double areaTrapezio = trapezio.calcularArea();
 
   print('');
   print('A área do trapezio é $areaTrapezio cm²');
