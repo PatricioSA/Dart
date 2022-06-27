@@ -6,7 +6,7 @@ class Imc {
 
   Imc([this.peso = 0, this.altura = 0]);
 
-  calcularImc(double peso, double altura) {
+  calcularImc() {
     double imc = peso / pow(altura, 2);
     String classificacao = '';
 
