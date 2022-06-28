@@ -1,7 +1,8 @@
 class Carro {
-  double potencia;
+  double velocidadeMaxima;
+  double velocidade;
 
-  Carro(this.potencia);
+  Carro([this.velocidadeMaxima = 100, this.velocidade = 0]);
 
   void acelerar() {
     double velocidade = 0;
