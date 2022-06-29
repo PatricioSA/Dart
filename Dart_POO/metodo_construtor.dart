@@ -33,5 +33,6 @@ void main() {
   String data2 = dataPedido.exibirData();
   String data3 = dataSaida.exibirData();
 
-  print('Data atual: $data1 :: Data da realização');
+  print('Data atual: $data1 :: Data da realização do pedido: $data2');
+  print('Data de saída do pedido: $data3');
 }
