@@ -5,12 +5,11 @@ class Carro {
   Carro([this.velocidadeMaxima = 100, this.velocidade = 0]);
 
   void acelerar() {
-    double velocidade = 0;
     while(true) {
       velocidade += 10;
       print('Acelerando o camaro a: ${velocidade}km/h');
 
-      if(velocidade == 100) {
+      if(velocidade == velocidadeMaxima) {
         limiteVelocidade();
         break;
       }
@@ -19,7 +18,6 @@ class Carro {
   }
 
   void frear() {
-    double velocidade = 100;
     while(true) {
       velocidade -= 10;
       print('Freando o camaro a: ${velocidade}km/h');
