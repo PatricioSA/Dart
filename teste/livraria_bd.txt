@@ -1,0 +1,98 @@
+CREATE DATABASE livraria
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
+
+CREATE TABLE IF NOT EXISTS autor(
+	codigo_autor INT NOT NULL AUTO_INCREMENT,
+	nome_autor VARCHAR(50) UNIQUE NOT NULL,
+	data_nascimento DATE,
+	genero_literario VARCHAR(100),
+	ocupacao VARCHAR(100),
+	PRIMARY KEY(codigo_autor)
+);
+
+CREATE TABLE IF NOT EXISTS editora(
+	codigo_editora INT NOT NULL AUTO_INCREMENT,
+	nome_editora VARCHAR(50) UNIQUE NOT NULL,
+	email VARCHAR(100),
+	telefone VARCHAR(15),
+	PRIMARY KEY(codigo_editora)
+);
+
+CREATE TABLE IF NOT EXISTS livro(
+	codigo_livro INT NOT NULL AUTO_INCREMENT,
+	id_editora INT NOT NULL,
+    id_autor INT NOT NULL,
+	nome_livro VARCHAR(50) UNIQUE NOT NULL,
+	ano_edicao YEAR,
+	idioma VARCHAR(20),
+	PRIMARY KEY(codigo_livro),
+    FOREIGN KEY(id_editora) REFERENCES editora(codigo_editora),
+    FOREIGN KEY(id_autor) REFERENCES autor(codigo_autor)
+);
+
+CREATE TABLE IF NOT EXISTS cliente(
+	codigo_cliente INT AUTO_INCREMENT,
+	nome_cliente VARCHAR(50) NOT NULL,
+	endereco VARCHAR(200),
+	telefone VARCHAR(20),
+	PRIMARY KEY (codigo_cliente)
+);
+
+CREATE TABLE IF NOT EXISTS pedidos(
+	codigo_pedido INT NOT NULL AUTO_INCREMENT,
+	id_cliente INT,
+	id_livro INT,
+	data DATE,
+	valor_pedido DECIMAL(7,2),
+	PRIMARY KEY(codigo_pedido),
+    FOREIGN KEY(id_cliente) REFERENCES cliente(codigo_cliente),
+    FOREIGN KEY(id_livro) REFERENCES livro(codigo_livro)
+);
+
+INSERT INTO autor VALUES
+(DEFAULT, 'Yago Martins', '1992-05-08', 'Espiritualidade', 'Teólogo'),
+(DEFAULT, 'Vinícius de Moraes', '1913-10-19', 'Poesia brasileira', 'Poeta'),
+(DEFAULT, 'Robert T. Kiyosaki', '1947-04-08', 'Finanças Pessoais', 'Empresário'),
+(DEFAULT, 'Laurentino Gomes', '1956-02-17', '', 'Jornalista'),
+(DEFAULT, 'George Orwell', '1903-06-25', 'Distopia', 'Jornalista'),
+(DEFAULT, 'Machado de Assis', '1839-06-21', 'Romantismo/Realismo', 'Escritor');
+
+INSERT INTO editora VALUES
+(DEFAULT, 'Editora 371', 'leitor.371@gmail.com', '85982241910'),
+(DEFAULT, 'NOME', 'EMAIL', 'TEL'),
+(DEFAULT, 'NOME', 'EMAIL', 'TEL'),
+(DEFAULT, 'NOME', 'EMAIL', 'TEL'),
+(DEFAULT, 'NOME', 'EMAIL', 'TEL'),
+(DEFAULT, 'NOME', 'EMAIL', 'TEL');
+
+INSERT INTO livro VALUES
+(DEFAULT, 1, 1, 'Pecados aceitáveis', '2020', 'Português'),
+(DEFAULT, 2, 2, 'Antologia Poética', '2009', 'Português'),
+(DEFAULT, 3, 3, 'Pai Rico, Pai Pobre', '2018', 'Português'),
+(DEFAULT, 4, 4, '1808', '2014', 'Português'),
+(DEFAULT, 5, 6, 'Dom casmurro', '2019', 'Português'),
+(DEFAULT, 6, 5, 'A Revolução dos Bichos', '2021', 'Português');
+
+INSERT INTO cliente VALUES
+(DEFAULT, 'Patricio', '', ''),
+(DEFAULT, 'Elisângela', 'ENDEREÇO', 'TEL'),
+(DEFAULT, 'Pedro', 'ENDEREÇO', 'TEL'),
+(DEFAULT, 'Lucas', 'ENDEREÇO', 'TEL'),
+(DEFAULT, 'Igor', 'ENDEREÇO', 'TEL'),
+(DEFAULT, 'Ana', 'ENDEREÇO', 'TEL'),
+
+INSERT INTO pedidos VALUES
+(DEFAULT, 1, 1, '2022-07-08', 39.90),
+(DEFAULT, 2, 4, '2019-06-04', 52.43),
+(DEFAULT, 3, 2, '2021-02-11', 18.95),
+(DEFAULT, 4, 3, '2022-12-12', 35.90),
+(DEFAULT, 5, 6, '2021-05-01', 69.90),
+(DEFAULT, 6, 5, '2022-09-10', 46.77);
+
+
+
+	SELECTS
+SELECT autor.nome_autor, autor.genero_literario, livro.nome_livro
+FROM autor INNER JOIN livro ON 
+livro.id_autor = autor.codigo_autor;

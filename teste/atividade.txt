@@ -1,0 +1,9 @@
+INSERT INTO filmes VALUES
+(DEFAULT, 'Avengers: Endegame', 'Vingadores: Ultimato', 'Ação', 'Anthony Russo', 'Christopher Markus', 'Marvel Studios', 'Robert Downey Jr.', 'Scarlett Johansson', '2019-04-25', 'Estados Unidos', 8.4),
+
+(DEFAULT, 'Pixels', 'Pixels', 'Ação', 'Chris Columbus', 'Tim Herlihy', 'Columbia Pictures', 'Adam Sandler', 'Michelle Monaghan', '2015-04-17', 'Estados Unidos', 5.6),
+
+(DEFAULT, 'Transformes', 'Transformes', 'Ação', 'Michael Bay', 'Roberto Orci', 'Dreamworks Pictures', 'Shia LaBeouf', 'Megan Fox', '2007-07-18', 'Estados Unidos', 7),
+
+(DEFAULT, 'Sonic the Hedgehog', 'Sonic: O filme', 'Aventura', 'Jeff Fowler', 'Pat Casey', 'Paramout Pictures',
+'Ben Schwartz', 'Tika Sumpter', '2020-02-13', 'Estados Unidos', 6.5);

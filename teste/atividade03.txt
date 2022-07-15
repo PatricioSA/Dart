@@ -1,0 +1,68 @@
+CREATE DATABASE atividade03
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
+
+CRATE TABLE autor(
+	codigo_autor INT(4),
+	nome_autor VARCHAR(50),
+	PRIMARY KEY(codigo_autor)
+);
+
+CREATE TABLE livro(
+    codigo_livro INT(4) AUTO_INCREMENT NOT NULL,
+    nome_livro VARCHAR(50) NOT NULL,
+    codigo_editora INT(4) NOT NULL,
+    codigo_autor INT(4) NOT NULL,
+    PRIMARY KEY(codigo_livro)
+);
+
+CREATE TABLE editora(
+    codigo_editora INT(4) AUTO_INCREMENT NOT NULL,
+    nome_editora VARCHAR(50) NOT NULL,
+    PRIMARY KEY(codigo_editora)
+);
+
+
+INSERT INTO autor VALUES
+(1, 'Yago Martins');
+
+INSERT INTO autor VALUES
+(2, 'Eric Freeman');
+
+INSERT INTO autor VALUES
+(3, 'Robert C. Martin');
+
+INSERT INTO autor VALUES
+(4, 'Elizabeth Castro');
+
+INSERT INTO autor VALUES
+(5, 'Rodrigo Bibo');
+
+
+INSERT INTO editora VALUES
+(123, 'Alta Books');
+
+INSERT INTO editora VALUES
+(456, 'Thomas Nelson Brasil');
+
+INSERT INTO editora VALUES
+(789, 'Record');
+
+
+INSERT INTO livro VALUES
+(1, 'No alvorecer dos Deuses', 456, 1);
+
+INSERT INTO livro VALUES
+(2, 'A máfia dos mendigos: Como a caridade aumenta a miséria', 789, 1);
+
+INSERT INTO livro VALUES
+(3, 'Código limpo: Habilidades práticas do Agile Software', 123, 3);
+
+INSERT INTO livro VALUES
+(4, 'Use a cabeça! HTML e CSS', 123, 2);
+
+INSERT INTO livro VALUES
+(5, 'HTML5 e CSS3: guia prático e visual', 123, 4);
+
+INSERT INTO livro VALUES
+(6,'O Deus que destrói sonhos', 456, 5);

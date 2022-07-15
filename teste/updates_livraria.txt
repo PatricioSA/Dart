@@ -1,0 +1,7 @@
+UPDATE livro
+SET id_editora = 6
+WHERE codigo_livro = 5
+
+UPDATE livro
+SET id_editora = 6 id_autor = 5
+WHERE codigo_livro = 6

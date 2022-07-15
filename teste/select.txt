@@ -1,0 +1,21 @@
+CREATE DATABASE atividade_select
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
+
+CREATE TABLE consoles_eletronicos(
+    id INT NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    fabricante VARCHAR(30),
+    lancamento DATE,
+    geracao VARCHAR(20),
+    PRIMARY KEY(id)
+);
+
+
+INSERT INTO consoles_eletronicos VALUES
+(DEFAULT, 'Playstation 1', 'Sony', '1994-12-03', 'Quinta'),
+(DEFAULT, 'Playstation 2', 'Sony', '2000-03-04', 'Sexta'),
+(DEFAULT, 'Playstation 3', 'Sony', '2006-11-11', 'Sétima'),
+(DEFAULT, 'Xbox 360', 'Microsoft', '2005-11-22', 'Sétima'),
+(DEFAULT, 'Xbox One', 'Microsoft', '2013-11-22', 'Oitava'),
+(DEFAULT, 'Playstation 5', 'Sony', '2020-11-12', 'Nona');
